@@ -1,7 +1,11 @@
 import "./App.module.css";
+import { Header } from "./components/Header";
+import "./global.css";
 
-function App() {
-  return <></>;
+export function App() {
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
-
-export default App;
