@@ -22,6 +22,10 @@
   box-sizing: border-box;
 }
 
+:focus {
+  outline: transparent;
+}
+
 body {
   background: var(--gray-600);
   color: var(--gray-300);
@@ -33,4 +37,14 @@ input {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  color: var(--gray-100);
+}
+
+button {
+  outline: transparent;
+  border: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--gray-100);
 }
