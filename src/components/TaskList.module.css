@@ -6,13 +6,13 @@
   flex-direction: column;
 }
 
-.header {
+.info {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
-.header p {
+.info p {
   font-weight: 700;
   font-size: 0.875rem;
 }
@@ -40,6 +40,8 @@
   display: flex;
   flex-grow: 1;
   justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emptyTasks {
@@ -55,13 +57,13 @@
   margin-bottom: 1rem;
 }
 
-.emptyTasks h1 {
+.emptyTasks strong {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5rem;
 }
 
-.emptyTasks h2 {
+.emptyTasks p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;

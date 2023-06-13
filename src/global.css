@@ -1,6 +1,7 @@
 :root {
   --blue: #4ea8de;
   --blue-dark: #1e6f9f;
+  --blue-dark-transparent: #1e6f9c33;
 
   --purple: #8284fa;
   --purple-dark: #5e60ce;
@@ -20,6 +21,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 :focus {
