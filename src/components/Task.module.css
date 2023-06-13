@@ -15,7 +15,7 @@
 .customCheckbox {
   display: inline-block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 1.5rem;
   margin-bottom: 12px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -36,11 +36,11 @@
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0.3125rem;
+  left: 0.1875rem;
   height: 1.125rem;
   width: 1.125rem;
-  background-color: transparent;
+  background-color: invisible;
   border-radius: 999px;
   border: 2px solid var(--blue);
   transition: all 0.2s;
