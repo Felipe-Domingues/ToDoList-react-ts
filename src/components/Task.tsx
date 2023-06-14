@@ -1,21 +1,46 @@
 import { Trash } from "@phosphor-icons/react";
 import styles from "./Task.module.css";
+import { ChangeEvent, useState } from "react";
 
-export function Task() {
+export interface TaskType {
+  id: string;
+  title: string;
+  isCompleted: boolean;
+}
+
+interface TaskProps {
+  task: TaskType;
+  onDeleteTask: (id: string) => void;
+  onCompleteTask: (id: string, isCompleted: boolean) => void;
+}
+
+export function Task({ task, onDeleteTask, onCompleteTask }: TaskProps) {
+  const [taskIsCompleted, setTaskIsCompleted] = useState(task.isCompleted);
+
+  function handleDeleteTask() {
+    onDeleteTask(task.id);
+  }
+
+  function handleCompletedTask(event: ChangeEvent<HTMLInputElement>) {
+    const IsCompleted = event.target.checked;
+    setTaskIsCompleted(IsCompleted);
+    onCompleteTask(task.id, IsCompleted);
+  }
+
   return (
     <div className={styles.task}>
       <label className={styles.customCheckbox} title="Concluir tarefa">
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          checked={taskIsCompleted}
+          onChange={handleCompletedTask}
+        />
         <span className={styles.checkmark}></span>
       </label>
-      <p className={styles.content}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Sed, laborum. Facilis eius voluptas reiciendis animi
-        quia eum quaerat nihil pariatur ex sapiente, accusamus illo accusantium
-        cum hic tenetur, iusto quae.
+      <p className={taskIsCompleted ? styles.titleLineThrough : styles.title}>
+        {task.title}
       </p>
-      <button title="Apagar tarefa">
+      <button onClick={handleDeleteTask} title="Apagar tarefa">
         <Trash height={16} />
       </button>
     </div>
