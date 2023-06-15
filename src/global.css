@@ -33,6 +33,7 @@ body {
   background: var(--gray-600);
   color: var(--gray-300);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body,
@@ -50,4 +51,31 @@ button {
   font-weight: 700;
   font-size: 0.875rem;
   color: var(--gray-100);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--purple-dark) var(--gray-500);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--gray-500);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--purple-dark);
+  border-radius: 8px;
+}
+
+@media (max-width: 820px) {
+  html {
+    font-size: 87.5%;
+  }
 }

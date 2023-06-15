@@ -76,10 +76,10 @@
 
 /* Style the checkmark/indicator */
 .customCheckbox .checkmark:after {
-  left: 6px;
-  top: 3px;
-  width: 5px;
-  height: 7px;
+  left: 0.375rem;
+  top: 0.1875rem;
+  width: 0.25rem;
+  height: 0.375rem;
   border: solid white;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
