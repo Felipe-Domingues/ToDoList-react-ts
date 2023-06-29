@@ -36,7 +36,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 A ToDo List é uma página para organizar suas tarefas e objetivos diários.
 
-- [Acesse o projeto finalizado, online](https://to-do-list-react-ts-ten.vercel.app/)
+- [Acesse o projeto finalizado, online](https://to-do-list-react-ts-felipe-domingues.vercel.app/)
 
 ## :memo: Licença
 
